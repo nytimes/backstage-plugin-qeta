@@ -49,7 +49,6 @@ steps:
   - name: install-dependencies
     image: node:18-alpine
     commands:
-      - mv yarn.lock.dist yarn.lock
       - yarn -v
       - node -v
       - yarn cache clean
