@@ -6,8 +6,6 @@ get:
 kind: pipeline
 type: docker
 name: publish-packages
-depends_on:
-  - backstage-test
 
 trigger:
   event:
@@ -81,7 +79,7 @@ steps:
     settings:
       webhook:
         from_secret: slack_webhook
-      channel: dv-dev-foundations-notifications
+      channel: dv-reliability-engineering-alerts
       username: nytimes/nebula-backstage-plugins (publish)
       template: >
         {{#success build.status}}
